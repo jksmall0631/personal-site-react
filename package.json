@@ -12,11 +12,8 @@
     "type": "git",
     "url": "https://github.com/turingschool-examples/react-starter-kit.git"
   },
-  "author": "Steve Kinney",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/turingschool-examples/react-starter-kit/issues"
-  },
   "homepage": "https://github.com/turingschool-examples/react-starter-kit",
   "devDependencies": {
     "babel": "^6.5.2",
@@ -44,5 +41,10 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2"
   }
 }
