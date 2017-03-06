@@ -126,6 +126,7 @@ a {
   font-size: 40px;
   height: 25px;
   overflow: hidden;
+  transition: transform 0.5s ease-in;
 }
 
 .second {
@@ -153,6 +154,7 @@ a {
 
 .title-container:hover .second {
   transform: translate(-1px);
+  transition-timing-function: ease-in;
   cursor: pointer;
 }
 
