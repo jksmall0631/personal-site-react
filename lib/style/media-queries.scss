@@ -1,0 +1,49 @@
+@media screen and (max-width: 950px) {
+  .right {
+    width: 60%;
+    left: 130px;
+    top: 60px;
+  }
+
+  .about-title {
+    top: 60px;
+    left: -70px;
+  }
+
+  .divider {
+    top: 350px;
+  }
+
+  .work {
+    top: 450px;
+  }
+
+  .hide-logo {
+    height: 100px;
+    width: 50px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .bio img {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .about-title {
+    top: -30px;
+    left: 20px;
+  }
+
+  .right {
+    left: 10px;
+    width: 75%;
+  }
+
+  .divider {
+    top: 300px;
+  }
+}

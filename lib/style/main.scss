@@ -74,7 +74,7 @@ a {
   padding-top: 80px;
   position: relative;
   top: 250px;
-  width: 600px;
+  max-width: 600px;
   height: 600px;
   text-align: center;
   background: url('../images/projects-background.jpg');
@@ -103,7 +103,7 @@ a {
 }
 
 .title-container {
-  width: 400px;
+  width: 250px;
   height: 40px;
   padding: 20px;
   margin: auto;
@@ -172,11 +172,6 @@ a {
 }
 
 .bio {
-  position: relative;
-  top: 110px;
-  // background: #B0C1C4;
-  opacity: 0.8;
-  width: 100%;
   height: 600px;
 }
 
