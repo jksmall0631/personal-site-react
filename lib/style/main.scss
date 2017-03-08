@@ -5,7 +5,10 @@ body {
 }
 
 header {
-  font-family: 'Poiret One', cursive;
+  // font-family: 'Poiret One', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  color: lightGrey;
   height:110px;
   width: 100%;
   position: fixed;
@@ -26,7 +29,6 @@ header {
   display: inline-block;
   padding: 25px 40px 0 0;
   z-index: 100;
-  background: white;
 }
 
 .nav li {
@@ -35,7 +37,7 @@ header {
 }
 
 a {
-  color: black;
+  color: grey;
   text-decoration: none;
 }
 
@@ -60,7 +62,7 @@ a {
 .scroll-border {
   position: relative;
   top: -90px;
-  background: url(http://cdn.mysitemyway.com/etc-mysitemyway/backgrounds/legacy-previews/backgrounds/watercolor-grunge/watercolor-grunge-000030-medium-blue.jpg);
+  background: url('../images/watercolor3.png');
   width: 100%;
   height: 500px;
   background-repeat: repeat-x;
@@ -70,7 +72,7 @@ a {
   margin: auto;
   padding-top: 80px;
   position: relative;
-  top: 110px;
+  top: 250px;
   width: 600px;
   height: 600px;
   text-align: center;
@@ -83,61 +85,20 @@ a {
   // background: #F4F4F4;
 }
 
-.project-logo-cont {
-  width: 250px;
-  height: 250px;
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
-  background: #F4F4F4;
-}
-
-.project-logo {
-  width: 100px;
-  position: relative;
-  top: 80px;
-}
-
-.logo-link {
-  height: 340px;
-}
-
-.desc {
-  display: inline-block;
-  width: 60%;
-  height: 440px;
-  color: grey;
-}
-
-.desc h2 {
-  padding: 20px;
-  font-size: 30px;
-
-}
-
-.desc p {
-  padding-bottom: 10px;
-  padding-right: 20px;
-}
-
 .first, .second {
   color: white;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
   font-size: 40px;
   height: 25px;
   overflow: hidden;
   transition: transform 0.5s ease-in;
 }
 
-.second {
-  height: 25px;
-}
-
 .second h2 {
   height: 20px;
   position: relative;
   bottom: 25px;
-  vertical-align: bottom;
 }
 
 .title-container {
@@ -159,5 +120,76 @@ a {
 }
 
 .top {
-  padding-top: 90px;
+  padding-top: 70px;
+}
+
+.first-nav {
+  height: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in;
+}
+
+.second-nav {
+  height: 7px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in;
+}
+
+.second-nav h2 {
+  position: relative;
+  bottom: 10px;
+}
+
+.title-container-nav:hover .first-nav {
+  transform: translate(1px);
+  cursor: pointer;
+}
+
+.title-container-nav:hover .second-nav {
+  transform: translate(-1px);
+  transition-timing-function: ease-in;
+  cursor: pointer;
+}
+
+.right {
+  width: 450px;
+  position: relative;
+  left: 600px;
+  top: -120px;
+  background: white;
+  line-height: 20px;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.about-title {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  top: -50px;
+  left: 60px;
+  font-size: 60px;
+}
+
+.bio {
+  position: relative;
+  top: 110px;
+  // background: #B0C1C4;
+  opacity: 0.8;
+  width: 100%;
+  height: 600px;
+}
+
+.bio img {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.divider {
+  position: relative;
+  top: 125px;
+  width: 75%;
+  height: 1px;
+  background: black;
+  margin: auto;
 }
