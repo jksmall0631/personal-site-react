@@ -1,0 +1,253 @@
+body {
+  font-family: sans-serif;
+  background: white;
+  color: black;
+}
+
+header {
+  // font-family: 'Poiret One', cursive;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  color: lightGrey;
+  height:110px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
+
+.nav-cont {
+  width: 100%;
+  height: 90px;
+  background: white;
+  z-index: 100;
+}
+
+.nav {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  padding: 25px 40px 0 0;
+  z-index: 100;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 20px;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+.bio {
+  position: relative;
+  top: 120px;
+}
+
+.logo {
+  position: relative;
+  z-index: 100;
+}
+
+.scroll-cont {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+}
+
+.scroll-border {
+  position: relative;
+  top: -90px;
+  background: url('../images/watercolor3.png');
+  width: 100%;
+  height: 500px;
+  background-repeat: repeat-x;
+}
+
+.work {
+  margin: auto;
+  padding-top: 80px;
+  position: relative;
+  top: 250px;
+  max-width: 600px;
+  height: 600px;
+  text-align: center;
+  background: url('../images/projects-background.jpg');
+  background-size: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  // display: flex;
+  // background: #F4F4F4;
+}
+
+.first, .second {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 40px;
+  height: 25px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in;
+}
+
+.second h2 {
+  height: 20px;
+  position: relative;
+  bottom: 25px;
+}
+
+.title-container {
+  width: 250px;
+  height: 40px;
+  padding: 20px;
+  margin: auto;
+}
+
+.title-container:hover .first {
+  transform: translate(1px);
+  cursor: pointer;
+}
+
+.title-container:hover .second {
+  transform: translate(-1px);
+  cursor: pointer;
+}
+
+.top {
+  padding-top: 70px;
+}
+
+.first-nav {
+  height: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in;
+}
+
+.second-nav {
+  height: 7px;
+  overflow: hidden;
+  transition: transform 0.5s ease-in;
+}
+
+.second-nav h2 {
+  position: relative;
+  bottom: 10px;
+}
+
+.title-container-nav:hover .first-nav {
+  transform: translate(1px);
+  cursor: pointer;
+}
+
+.title-container-nav:hover .second-nav {
+  transform: translate(-1px);
+  cursor: pointer;
+}
+
+.right {
+  width: 30%;
+  position: relative;
+  left: 600px;
+  top: -120px;
+  background: white;
+  line-height: 20px;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.about-title {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  top: -50px;
+  left: 60px;
+  font-size: 60px;
+}
+
+.bio {
+  height: 600px;
+}
+
+.bio img {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.divider {
+  position: relative;
+  top: 140px;
+  width: 75%;
+  height: 1px;
+  background: black;
+  margin: auto;
+}
+
+.project, .contact {
+  z-index: 1000;
+  background: white;
+  opacity: 0.95;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.project h1 {
+  font-family: 'Oswald', sans-serif;
+  margin: 50px 50px 20px 50px;
+  font-size: 40px;
+}
+
+.project p {
+  margin: 0 200px 20px 50px;
+}
+
+.project img {
+  margin-left: 50px;
+}
+
+.escape {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  transition: all 0.2s ease-out;
+}
+
+.escape:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact ul {
+  margin-top: 200px;
+}
+
+.contact li {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 50px;
+  width: 55px;
+  height: 55px;
+}
+
+.contact img {
+  transition: all 0.2s ease-in;
+}
+
+.contact img:hover {
+  transform: scale(1.1);
+}
