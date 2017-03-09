@@ -116,7 +116,6 @@ a {
 
 .title-container:hover .second {
   transform: translate(-1px);
-  transition-timing-function: ease-in;
   cursor: pointer;
 }
 
@@ -148,7 +147,6 @@ a {
 
 .title-container-nav:hover .second-nav {
   transform: translate(-1px);
-  transition-timing-function: ease-in;
   cursor: pointer;
 }
 
@@ -190,7 +188,7 @@ a {
   margin: auto;
 }
 
-.project {
+.project, .contact {
   z-index: 1000;
   background: white;
   opacity: 0.95;
@@ -215,11 +213,41 @@ a {
   margin-left: 50px;
 }
 
-.project button {
+.escape {
   position: absolute;
   top: 50px;
   right: 50px;
   background: none;
   border: none;
-  font-size: 50px;
+  font-size: 40px;
+  transition: all 0.2s ease-out;
+}
+
+.escape:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact ul {
+  margin-top: 200px;
+}
+
+.contact li {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 50px;
+  width: 55px;
+  height: 55px;
+}
+
+.contact img {
+  transition: all 0.2s ease-in;
+}
+
+.contact img:hover {
+  transform: scale(1.1);
 }
