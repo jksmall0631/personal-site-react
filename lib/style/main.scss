@@ -189,3 +189,37 @@ a {
   background: black;
   margin: auto;
 }
+
+.project {
+  z-index: 1000;
+  background: white;
+  opacity: 0.95;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.project h1 {
+  font-family: 'Oswald', sans-serif;
+  margin: 50px 50px 20px 50px;
+  font-size: 40px;
+}
+
+.project p {
+  margin: 0 200px 20px 50px;
+}
+
+.project img {
+  margin-left: 50px;
+}
+
+.project button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: none;
+  border: none;
+  font-size: 50px;
+}
