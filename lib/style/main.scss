@@ -17,6 +17,10 @@ header {
   transition: transform 0.5s ease-out;
 }
 
+button:focus {
+  outline: none;
+}
+
 .nav-cont {
   width: 100%;
   height: 90px;
