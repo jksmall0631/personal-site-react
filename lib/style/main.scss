@@ -86,8 +86,6 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.5;
-  // display: flex;
-  // background: #F4F4F4;
 }
 
 .first, .second {
@@ -157,8 +155,8 @@ a {
 .right {
   width: 30%;
   position: relative;
-  left: 600px;
-  top: -120px;
+  left: 680px;
+  top: -220px;
   background: white;
   line-height: 20px;
   padding: 20px;
@@ -169,7 +167,7 @@ a {
   font-family: 'Oswald', sans-serif;
   position: absolute;
   top: -50px;
-  left: 60px;
+  left: 20px;
   font-size: 60px;
 }
 
