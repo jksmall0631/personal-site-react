@@ -1,13 +1,13 @@
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
   .right {
     width: 60%;
-    left: 130px;
+    left: 150px;
     top: 60px;
   }
 
   .about-title {
     top: 60px;
-    left: -70px;
+    left: -90px;
   }
 
   .divider {
@@ -29,13 +29,17 @@
 
 }
 
-@media screen and (max-width: 500px) {
-
+@media screen and (max-width: 700px) {
   .bio img {
     width: 100%;
     top: 0;
     left: 0;
   }
+}
+
+@media screen and (max-width: 500px) {
+
+
 
   .about-title {
     top: -30px;

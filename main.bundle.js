@@ -34916,7 +34916,7 @@
 	          _react2.default.createElement(
 	            "h2",
 	            { className: "about-title" },
-	            "Yo,"
+	            "Hey,"
 	          ),
 	          _react2.default.createElement(
 	            "p",
