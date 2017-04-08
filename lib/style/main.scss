@@ -85,7 +85,14 @@ a {
   background-size: 800px;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.5;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.border {
+  border: 2px solid white;
+  margin: 0px 40px;
+  padding-bottom: 65px;
 }
 
 .first, .second {
@@ -105,9 +112,9 @@ a {
 }
 
 .title-container {
-  width: 250px;
+  width: 225px;
   height: 40px;
-  padding: 20px;
+  padding: 20px 0px;
   margin: auto;
 }
 
