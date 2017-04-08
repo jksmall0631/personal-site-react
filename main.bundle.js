@@ -8204,11 +8204,11 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	__webpack_require__(552);
+	__webpack_require__(553);
 
-	__webpack_require__(556);
+	__webpack_require__(557);
 
-	__webpack_require__(558);
+	__webpack_require__(559);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34812,6 +34812,8 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(299);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -34824,49 +34826,94 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Work = function Work(_ref) {
-	  var grabProject = _ref.grabProject;
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'work', id: 'work' },
-	    _react2.default.createElement(
-	      'a',
-	      { onClick: function onClick() {
-	          grabProject({ image: 'recipe-app-background.png', title: 'RECIPE SHMECIPE', description: 'An application created in React and Redux to search for and keep track of recipes. I used a package called Quagga.js to scan upc codes and will eventually make recipe suggestions based on what is going bad. I worked with a backend called Firebase to sign up, sign in, and save recipes/ingredients', link: 'https://github.com/jksmall0631/recipe-app' });
-	        } },
-	      _react2.default.createElement(_Split2.default, { title: 'Recipe Shmecipe', container: 'title-container top', first: 'first', second: 'second' })
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { onClick: function onClick() {
-	          grabProject({ image: 'movie-tracker-background.png', title: 'MOVIE TRACKER', description: 'An application created in React and Redux to peruse and select favorites that you can reference later. We utilized a Node Server built by the instructor to allow signing up, signing in, and saving/deleting favorites', link: 'https://github.com/jksmall0631/movie-tracker' });
-	        } },
-	      _react2.default.createElement(_Split2.default, { title: 'Movie Tracker', container: 'title-container', first: 'first', second: 'second' })
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { onClick: function onClick() {
-	          grabProject({ image: 'networker1.png', title: 'NETWORKER', description: 'An application created in React Native to keep track of potential business connections. We utilized a backend called Firebase that we used to sign up, sign in, and store specific users connections', link: 'https://github.com/jksmall0631/nimbleNetwork' });
-	        } },
-	      _react2.default.createElement(_Split2.default, { title: 'Networker', container: 'title-container', first: 'first', second: 'second' })
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { onClick: function onClick() {
-	          grabProject({ image: 'RemEMBER.png', title: 'RemEMBER', description: 'An application created in Ember to keep track of todos.', link: 'https://github.com/jksmall0631/1610-remember-1' });
-	        } },
-	      _react2.default.createElement(_Split2.default, { title: 'RemEMBER', container: 'title-container', first: 'first', second: 'second' })
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { onClick: function onClick() {
-	          grabProject({ image: 'frogger.png', title: 'FROGGER', description: 'An application created in Javascript using canvas. You know the game, get the frog across the street.', link: 'https://github.com/jksmall0631/frogger' });
-	        } },
-	      _react2.default.createElement(_Split2.default, { title: 'Frogger', container: 'title-container', first: 'first', second: 'second' })
-	    )
-	  );
-	};
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Work = function (_Component) {
+	  _inherits(Work, _Component);
+
+	  function Work() {
+	    _classCallCheck(this, Work);
+
+	    return _possibleConstructorReturn(this, (Work.__proto__ || Object.getPrototypeOf(Work)).apply(this, arguments));
+	  }
+
+	  _createClass(Work, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.addEventListener('scroll', this.fade);
+	    }
+	  }, {
+	    key: 'fade',
+	    value: function fade() {
+	      var scrollTop = event.srcElement.body.scrollTop,
+	          itemTranslate = Math.min(0, scrollTop / 3 - 60);
+	      var work = document.querySelector('.work');
+	      if (scrollTop > 300) {
+	        work.style.opacity = 0.5;
+	      } else {
+	        work.style.opacity = 0;
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'work', id: 'work' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'border' },
+	          _react2.default.createElement(
+	            'a',
+	            { onClick: function onClick() {
+	                _this2.props.grabProject({ image: 'recipe-app-background.png', title: 'RECIPE SHMECIPE', description: 'An application created in React and Redux to search for and keep track of recipes. I used a package called Quagga.js to scan upc codes and will eventually make recipe suggestions based on what is going bad. I worked with a backend called Firebase to sign up, sign in, and save recipes/ingredients', link: 'https://github.com/jksmall0631/recipe-app' });
+	              } },
+	            _react2.default.createElement(_Split2.default, { title: 'Recipe Shmecipe', container: 'title-container top', first: 'first', second: 'second' })
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { onClick: function onClick() {
+	                _this2.props.grabProject({ image: 'movie-tracker-background.png', title: 'MOVIE TRACKER', description: 'An application created in React and Redux to peruse and select favorites that you can reference later. We utilized a Node Server built by the instructor to allow signing up, signing in, and saving/deleting favorites', link: 'https://github.com/jksmall0631/movie-tracker' });
+	              } },
+	            _react2.default.createElement(_Split2.default, { title: 'Movie Tracker', container: 'title-container', first: 'first', second: 'second' })
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { onClick: function onClick() {
+	                _this2.props.grabProject({ image: 'networker1.png', title: 'NETWORKER', description: 'An application created in React Native to keep track of potential business connections. We utilized a backend called Firebase that we used to sign up, sign in, and store specific users connections', link: 'https://github.com/jksmall0631/nimbleNetwork' });
+	              } },
+	            _react2.default.createElement(_Split2.default, { title: 'Networker', container: 'title-container', first: 'first', second: 'second' })
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { onClick: function onClick() {
+	                _this2.props.grabProject({ image: 'RemEMBER.png', title: 'RemEMBER', description: 'An application created in Ember to keep track of todos.', link: 'https://github.com/jksmall0631/1610-remember-1' });
+	              } },
+	            _react2.default.createElement(_Split2.default, { title: 'RemEMBER', container: 'title-container', first: 'first', second: 'second' })
+	          ),
+	          _react2.default.createElement(
+	            'a',
+	            { onClick: function onClick() {
+	                _this2.props.grabProject({ image: 'frogger.png', title: 'FROGGER', description: 'An application created in Javascript using canvas. You know the game, get the frog across the street.', link: 'https://github.com/jksmall0631/frogger' });
+	              } },
+	            _react2.default.createElement(_Split2.default, { title: 'Frogger', container: 'title-container', first: 'first', second: 'second' })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Work;
+	}(_react.Component);
+
+	// export default Work;
+
 
 	exports.default = Work;
 
@@ -34874,7 +34921,7 @@
 /* 535 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -34904,30 +34951,30 @@
 	  }
 
 	  _createClass(About, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "section",
-	        { className: "bio", id: "about" },
-	        _react2.default.createElement("img", { src: __webpack_require__(536), width: "600px", alt: "personal photo" }),
+	        'section',
+	        { className: 'bio', id: 'about' },
+	        _react2.default.createElement('img', { className: 'bio-image', src: __webpack_require__(536), width: '600px', alt: 'personal photo' }),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "right" },
+	          'div',
+	          { className: 'right' },
 	          _react2.default.createElement(
-	            "h2",
-	            { className: "about-title" },
-	            "Hey,"
+	            'h2',
+	            { className: 'about-title' },
+	            'Hey,'
 	          ),
 	          _react2.default.createElement(
-	            "p",
+	            'p',
 	            null,
-	            "I design and build clean, easy to use websites. There are a handful of things I really care about; quality, structure, tech, design, and life-long learning. These are the assets I apply to my work. I do well in a group environment, contributing my unique vision, ambition, and a diverse skillset. Currently making my way through The Turing School of Software and design, sharpening those skills."
+	            'My name is Joshua Small. I design and build clean, easy to use websites. There are a handful of things I really care about; quality, structure, tech, design, and life-long learning. These are the assets I apply to my work. I do well in a group environment, contributing my unique vision, ambition, and a diverse skillset. Currently making my way through The Turing School of Software and design, sharpening those skills.'
 	          ),
-	          _react2.default.createElement("br", null),
+	          _react2.default.createElement('br', null),
 	          _react2.default.createElement(
-	            "p",
+	            'p',
 	            null,
-	            "If I'm not on my computer, you'll probably find me in the snow somewhere."
+	            'If I\'m not on my computer, you\'ll probably find me in the snow somewhere.'
 	          )
 	        )
 	      );
@@ -35096,9 +35143,11 @@
 		"./networker1.png": 546,
 		"./networker2.png": 547,
 		"./networker3.png": 548,
+		"./personal-site-logo8.png": 533,
 		"./projects-background.jpg": 549,
 		"./recipe-app-background.png": 550,
-		"./watercolor.png": 551
+		"./scroll-arrow.png": 551,
+		"./watercolor.png": 552
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -35166,19 +35215,25 @@
 /* 551 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "f539cf0e7564b7987314c1f8243953c4.png";
+	module.exports = __webpack_require__.p + "fe28c4f9b755ddcaa9af8fbcc3a5443b.png";
 
 /***/ },
 /* 552 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "f539cf0e7564b7987314c1f8243953c4.png";
+
+/***/ },
+/* 553 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(553);
+	var content = __webpack_require__(554);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(555)(content, {});
+	var update = __webpack_require__(556)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35195,10 +35250,10 @@
 	}
 
 /***/ },
-/* 553 */
+/* 554 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(554)();
+	exports = module.exports = __webpack_require__(555)();
 	// imports
 
 
@@ -35209,7 +35264,7 @@
 
 
 /***/ },
-/* 554 */
+/* 555 */
 /***/ function(module, exports) {
 
 	/*
@@ -35265,7 +35320,7 @@
 
 
 /***/ },
-/* 555 */
+/* 556 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -35517,16 +35572,16 @@
 
 
 /***/ },
-/* 556 */
+/* 557 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(557);
+	var content = __webpack_require__(558);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(555)(content, {});
+	var update = __webpack_require__(556)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35543,30 +35598,30 @@
 	}
 
 /***/ },
-/* 557 */
+/* 558 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(554)();
+	exports = module.exports = __webpack_require__(555)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "body {\n  font-family: sans-serif;\n  background: white;\n  color: black; }\n\nheader {\n  font-family: 'Oswald', sans-serif;\n  font-weight: 200;\n  color: lightGrey;\n  height: 110px;\n  width: 100%;\n  position: fixed;\n  z-index: 1;\n  display: flex;\n  transition: transform 0.5s ease-out; }\n\nbutton:focus {\n  outline: none; }\n\n.nav-cont {\n  width: 100%;\n  height: 90px;\n  background: white;\n  z-index: 100; }\n\n.nav {\n  position: absolute;\n  right: 0;\n  display: inline-block;\n  padding: 25px 40px 0 0;\n  z-index: 100; }\n\n.nav li {\n  display: inline-block;\n  margin: 20px; }\n\na {\n  color: grey;\n  text-decoration: none; }\n\n.bio {\n  position: relative;\n  top: 120px; }\n\n.logo {\n  position: relative;\n  z-index: 100; }\n\n.scroll-cont {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  height: 110px;\n  overflow: hidden; }\n\n.scroll-border {\n  position: relative;\n  top: -90px;\n  background: url(" + __webpack_require__(551) + ");\n  width: 100%;\n  height: 500px;\n  background-repeat: repeat-x; }\n\n.work {\n  margin: auto;\n  padding-top: 80px;\n  position: relative;\n  top: 250px;\n  max-width: 600px;\n  height: 600px;\n  text-align: center;\n  background: url(" + __webpack_require__(549) + ");\n  background-size: 800px;\n  background-position: center;\n  background-repeat: no-repeat;\n  opacity: 0.5; }\n\n.first, .second {\n  color: white;\n  font-family: 'Oswald', sans-serif;\n  font-weight: 200;\n  font-size: 40px;\n  height: 25px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second h2 {\n  height: 20px;\n  position: relative;\n  bottom: 25px; }\n\n.title-container {\n  width: 250px;\n  height: 40px;\n  padding: 20px;\n  margin: auto; }\n\n.title-container:hover .first {\n  transform: translate(1px);\n  cursor: pointer; }\n\n.title-container:hover .second {\n  transform: translate(-1px);\n  cursor: pointer; }\n\n.top {\n  padding-top: 70px; }\n\n.first-nav {\n  height: 10px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second-nav {\n  height: 7px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second-nav h2 {\n  position: relative;\n  bottom: 10px; }\n\n.title-container-nav:hover .first-nav {\n  transform: translate(1px);\n  cursor: pointer; }\n\n.title-container-nav:hover .second-nav {\n  transform: translate(-1px);\n  cursor: pointer; }\n\n.right {\n  width: 30%;\n  position: relative;\n  left: 600px;\n  top: -120px;\n  background: white;\n  line-height: 20px;\n  padding: 20px;\n  border-radius: 2px; }\n\n.about-title {\n  font-family: 'Oswald', sans-serif;\n  position: absolute;\n  top: -50px;\n  left: 60px;\n  font-size: 60px; }\n\n.bio {\n  height: 600px; }\n\n.bio img {\n  position: relative;\n  top: 50px;\n  left: 50px; }\n\n.divider {\n  position: relative;\n  top: 140px;\n  width: 75%;\n  height: 1px;\n  background: black;\n  margin: auto; }\n\n.project, .contact {\n  z-index: 1000;\n  background: white;\n  opacity: 0.95;\n  position: fixed;\n  top: 0px;\n  right: 0px;\n  width: 100%;\n  height: 100%; }\n\n.project h1 {\n  font-family: 'Oswald', sans-serif;\n  margin: 50px 50px 20px 50px;\n  font-size: 40px; }\n\n.project p {\n  margin: 0 200px 20px 50px; }\n\n.project img {\n  margin-left: 50px; }\n\n.escape {\n  position: absolute;\n  top: 50px;\n  right: 50px;\n  background: none;\n  border: none;\n  font-size: 40px;\n  transition: all 0.2s ease-out; }\n\n.escape:hover {\n  transform: scale(1.1);\n  cursor: pointer; }\n\n.contact {\n  text-align: center; }\n\n.contact ul {\n  margin-top: 200px; }\n\n.contact li {\n  vertical-align: middle;\n  display: inline-block;\n  padding: 50px;\n  width: 55px;\n  height: 55px; }\n\n.contact img {\n  transition: all 0.2s ease-in; }\n\n.contact img:hover {\n  transform: scale(1.1); }\n", ""]);
+	exports.push([module.id, "body {\n  font-family: sans-serif;\n  background: white;\n  color: black; }\n\nheader {\n  font-family: 'Oswald', sans-serif;\n  font-weight: 200;\n  color: lightGrey;\n  height: 110px;\n  width: 100%;\n  position: fixed;\n  z-index: 1;\n  display: flex;\n  transition: transform 0.5s ease-out; }\n\nbutton:focus {\n  outline: none; }\n\n.nav-cont {\n  width: 100%;\n  height: 90px;\n  background: white;\n  z-index: 100; }\n\n.nav {\n  position: absolute;\n  right: 0;\n  display: inline-block;\n  padding: 25px 40px 0 0;\n  z-index: 100; }\n\n.nav li {\n  display: inline-block;\n  margin: 20px; }\n\na {\n  color: grey;\n  text-decoration: none; }\n\n.bio {\n  position: relative;\n  top: 120px; }\n\n.logo {\n  position: relative;\n  z-index: 100; }\n\n.scroll-cont {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  height: 110px;\n  overflow: hidden; }\n\n.scroll-border {\n  position: relative;\n  top: -90px;\n  background: url(" + __webpack_require__(552) + ");\n  width: 100%;\n  height: 500px;\n  background-repeat: repeat-x; }\n\n.work {\n  margin: auto;\n  padding-top: 80px;\n  position: relative;\n  top: 250px;\n  max-width: 600px;\n  height: 600px;\n  text-align: center;\n  background: url(" + __webpack_require__(549) + ");\n  background-size: 800px;\n  background-position: center;\n  background-repeat: no-repeat;\n  opacity: 0;\n  transition: opacity 0.5s ease-in; }\n\n.border {\n  border: 2px solid white;\n  margin: 0px 40px;\n  padding-bottom: 65px; }\n\n.first, .second {\n  color: white;\n  font-family: 'Oswald', sans-serif;\n  font-weight: 200;\n  font-size: 40px;\n  height: 25px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second h2 {\n  height: 20px;\n  position: relative;\n  bottom: 25px; }\n\n.title-container {\n  width: 225px;\n  height: 40px;\n  padding: 20px 0px;\n  margin: auto; }\n\n.title-container:hover .first {\n  transform: translate(1px);\n  cursor: pointer; }\n\n.title-container:hover .second {\n  transform: translate(-1px);\n  cursor: pointer; }\n\n.top {\n  padding-top: 70px; }\n\n.first-nav {\n  height: 10px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second-nav {\n  height: 7px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second-nav h2 {\n  position: relative;\n  bottom: 10px; }\n\n.title-container-nav:hover .first-nav {\n  transform: translate(1px);\n  cursor: pointer; }\n\n.title-container-nav:hover .second-nav {\n  transform: translate(-1px);\n  cursor: pointer; }\n\n.right {\n  width: 30%;\n  position: relative;\n  left: 680px;\n  top: -220px;\n  background: white;\n  line-height: 20px;\n  padding: 20px;\n  border-radius: 2px; }\n\n.about-title {\n  font-family: 'Oswald', sans-serif;\n  position: absolute;\n  top: -50px;\n  left: 20px;\n  font-size: 60px; }\n\n.bio {\n  height: 600px; }\n\n.bio img {\n  position: relative;\n  top: 50px;\n  left: 50px; }\n\n.divider {\n  position: relative;\n  top: 140px;\n  width: 75%;\n  height: 1px;\n  background: black;\n  margin: auto; }\n\n.project, .contact {\n  z-index: 1000;\n  background: white;\n  opacity: 0.95;\n  position: fixed;\n  top: 0px;\n  right: 0px;\n  width: 100%;\n  height: 100%; }\n\n.project h1 {\n  font-family: 'Oswald', sans-serif;\n  margin: 50px 50px 20px 50px;\n  font-size: 40px; }\n\n.project p {\n  margin: 0 200px 20px 50px; }\n\n.project img {\n  margin-left: 50px; }\n\n.escape {\n  position: absolute;\n  top: 50px;\n  right: 50px;\n  background: none;\n  border: none;\n  font-size: 40px;\n  transition: all 0.2s ease-out; }\n\n.escape:hover {\n  transform: scale(1.1);\n  cursor: pointer; }\n\n.contact {\n  text-align: center; }\n\n.contact ul {\n  margin-top: 200px; }\n\n.contact li {\n  vertical-align: middle;\n  display: inline-block;\n  padding: 50px;\n  width: 55px;\n  height: 55px; }\n\n.contact img {\n  transition: all 0.2s ease-in; }\n\n.contact img:hover {\n  transform: scale(1.1); }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 558 */
+/* 559 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(559);
+	var content = __webpack_require__(560);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(555)(content, {});
+	var update = __webpack_require__(556)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35583,15 +35638,15 @@
 	}
 
 /***/ },
-/* 559 */
+/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(554)();
+	exports = module.exports = __webpack_require__(555)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "@media screen and (max-width: 950px) {\n  .right {\n    width: 60%;\n    left: 130px;\n    top: 60px; }\n  .about-title {\n    top: 60px;\n    left: -70px; }\n  .divider {\n    top: 350px; }\n  .work {\n    top: 450px; }\n  .hide-logo {\n    height: 100px;\n    width: 50px; }\n  .project img {\n    width: 70%; } }\n\n@media screen and (max-width: 500px) {\n  .bio img {\n    width: 100%;\n    top: 0;\n    left: 0; }\n  .about-title {\n    top: -30px;\n    left: 20px; }\n  .right {\n    left: 10px;\n    width: 75%; }\n  .divider {\n    top: 300px; }\n  .nav li {\n    margin: 10px; }\n  .project h1 {\n    margin-top: 150px; }\n  .project p {\n    margin-right: 20px; } }\n", ""]);
+	exports.push([module.id, "@media screen and (max-width: 1000px) {\n  .right {\n    width: 60%;\n    left: 150px;\n    top: 60px; }\n  .about-title {\n    top: 60px;\n    left: -90px; }\n  .divider {\n    top: 350px; }\n  .work {\n    top: 450px; }\n  .hide-logo {\n    height: 100px;\n    width: 50px; }\n  .project img {\n    width: 70%; } }\n\n@media screen and (max-width: 700px) {\n  .bio img {\n    width: 100%;\n    top: 0;\n    left: 0; } }\n\n@media screen and (max-width: 500px) {\n  .about-title {\n    top: -30px;\n    left: 20px; }\n  .right {\n    left: 10px;\n    width: 75%; }\n  .divider {\n    top: 300px; }\n  .nav li {\n    margin: 10px; }\n  .project h1 {\n    margin-top: 150px; }\n  .project p {\n    margin-right: 20px; } }\n", ""]);
 
 	// exports
 
