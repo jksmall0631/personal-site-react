@@ -29647,12 +29647,11 @@
 	    key: 'collapseHeader',
 	    value: function collapseHeader() {
 	      var scrollTop = window.scrollY;
-	      var prevScrollTop = scrollTop;
 	      var collapseHeader = document.querySelector('.header');
 	      if (scrollTop > 110) {
 	        collapseHeader.style.transform = 'translate(0px, -90px)';
 	      }
-	      if (scrollTop < prevScrollTop) {
+	      if (scrollTop < 110) {
 	        collapseHeader.style.transform = 'translate(0px, 0px)';
 	      }
 	    }
