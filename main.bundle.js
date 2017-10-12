@@ -8204,11 +8204,11 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	__webpack_require__(553);
+	__webpack_require__(554);
 
-	__webpack_require__(557);
+	__webpack_require__(558);
 
-	__webpack_require__(559);
+	__webpack_require__(560);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29638,22 +29638,21 @@
 	    }
 	  }, {
 	    key: 'handleScroll',
-	    value: function handleScroll(event) {
-	      var scrollTop = event.srcElement.body.scrollTop,
-	          itemTranslate = Math.min(0, scrollTop / 3 - 60);
+	    value: function handleScroll() {
+	      var scrollTop = window.scrollY;
 	      var para = document.querySelector('.scroll-border');
 	      para.style.top = -(scrollTop / 30) - 90 + 'px';
 	    }
 	  }, {
 	    key: 'collapseHeader',
-	    value: function collapseHeader(event) {
-	      var scrollTop = event.srcElement.body.scrollTop,
-	          itemTranslate = Math.min(0, scrollTop / 3 - 60);
+	    value: function collapseHeader() {
+	      var scrollTop = window.scrollY;
+	      var prevScrollTop = scrollTop;
 	      var collapseHeader = document.querySelector('.header');
 	      if (scrollTop > 110) {
 	        collapseHeader.style.transform = 'translate(0px, -90px)';
 	      }
-	      if (scrollTop < 110) {
+	      if (scrollTop < prevScrollTop) {
 	        collapseHeader.style.transform = 'translate(0px, 0px)';
 	      }
 	    }
@@ -34844,13 +34843,12 @@
 	  _createClass(Work, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      window.addEventListener('scroll', this.fade);
+	      document.addEventListener('scroll', this.fade);
 	    }
 	  }, {
 	    key: 'fade',
 	    value: function fade() {
-	      var scrollTop = event.srcElement.body.scrollTop,
-	          itemTranslate = Math.min(0, scrollTop / 3 - 60);
+	      var scrollTop = window.scrollY;
 	      var work = document.querySelector('.work');
 	      if (scrollTop > 300) {
 	        work.style.opacity = 0.5;
@@ -35135,19 +35133,20 @@
 	var map = {
 		"./RemEMBER.png": 543,
 		"./email.png": 538,
-		"./frogger.png": 544,
+		"./favicon.png": 544,
+		"./frogger.png": 545,
 		"./github.png": 539,
 		"./linkedin.png": 540,
 		"./moi.jpg": 536,
-		"./movie-tracker-background.png": 545,
-		"./networker1.png": 546,
-		"./networker2.png": 547,
-		"./networker3.png": 548,
+		"./movie-tracker-background.png": 546,
+		"./networker1.png": 547,
+		"./networker2.png": 548,
+		"./networker3.png": 549,
 		"./personal-site-logo8.png": 533,
-		"./projects-background.jpg": 549,
-		"./recipe-app-background.png": 550,
-		"./scroll-arrow.png": 551,
-		"./watercolor.png": 552
+		"./projects-background.jpg": 550,
+		"./recipe-app-background.png": 551,
+		"./scroll-arrow.png": 552,
+		"./watercolor.png": 553
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -35173,67 +35172,73 @@
 /* 544 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "d6dcc853ae3feb7e83b1939076718071.png";
+	module.exports = __webpack_require__.p + "1333016fa1fac0f03134c8f8a5d8a38b.png";
 
 /***/ },
 /* 545 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "4a8584f3390c2172cbc87d7ac5f50b67.png";
+	module.exports = __webpack_require__.p + "d6dcc853ae3feb7e83b1939076718071.png";
 
 /***/ },
 /* 546 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "1e12ffc49343ec001d6d1f4af03058fc.png";
+	module.exports = __webpack_require__.p + "4a8584f3390c2172cbc87d7ac5f50b67.png";
 
 /***/ },
 /* 547 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "4d94268f6d2c84b69b0bb1bf5cd95913.png";
+	module.exports = __webpack_require__.p + "1e12ffc49343ec001d6d1f4af03058fc.png";
 
 /***/ },
 /* 548 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "b3ab41d639583aa43eedd2efa4925f4e.png";
+	module.exports = __webpack_require__.p + "4d94268f6d2c84b69b0bb1bf5cd95913.png";
 
 /***/ },
 /* 549 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "1e63392166c18b7d035f783a4f9ff019.jpg";
+	module.exports = __webpack_require__.p + "b3ab41d639583aa43eedd2efa4925f4e.png";
 
 /***/ },
 /* 550 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "47a9d35a000931b9232af84a15b2ee75.png";
+	module.exports = __webpack_require__.p + "1e63392166c18b7d035f783a4f9ff019.jpg";
 
 /***/ },
 /* 551 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "fe28c4f9b755ddcaa9af8fbcc3a5443b.png";
+	module.exports = __webpack_require__.p + "47a9d35a000931b9232af84a15b2ee75.png";
 
 /***/ },
 /* 552 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "f539cf0e7564b7987314c1f8243953c4.png";
+	module.exports = __webpack_require__.p + "fe28c4f9b755ddcaa9af8fbcc3a5443b.png";
 
 /***/ },
 /* 553 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "f539cf0e7564b7987314c1f8243953c4.png";
+
+/***/ },
+/* 554 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(554);
+	var content = __webpack_require__(555);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(556)(content, {});
+	var update = __webpack_require__(557)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35250,10 +35255,10 @@
 	}
 
 /***/ },
-/* 554 */
+/* 555 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(555)();
+	exports = module.exports = __webpack_require__(556)();
 	// imports
 
 
@@ -35264,7 +35269,7 @@
 
 
 /***/ },
-/* 555 */
+/* 556 */
 /***/ function(module, exports) {
 
 	/*
@@ -35320,7 +35325,7 @@
 
 
 /***/ },
-/* 556 */
+/* 557 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -35572,16 +35577,16 @@
 
 
 /***/ },
-/* 557 */
+/* 558 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(558);
+	var content = __webpack_require__(559);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(556)(content, {});
+	var update = __webpack_require__(557)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35598,30 +35603,30 @@
 	}
 
 /***/ },
-/* 558 */
+/* 559 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(555)();
+	exports = module.exports = __webpack_require__(556)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "body {\n  font-family: sans-serif;\n  background: white;\n  color: black; }\n\nheader {\n  font-family: 'Oswald', sans-serif;\n  font-weight: 200;\n  color: lightGrey;\n  height: 110px;\n  width: 100%;\n  position: fixed;\n  z-index: 1;\n  display: flex;\n  transition: transform 0.5s ease-out; }\n\nbutton:focus {\n  outline: none; }\n\n.nav-cont {\n  width: 100%;\n  height: 90px;\n  background: white;\n  z-index: 100; }\n\n.nav {\n  position: absolute;\n  right: 0;\n  display: inline-block;\n  padding: 25px 40px 0 0;\n  z-index: 100; }\n\n.nav li {\n  display: inline-block;\n  margin: 20px; }\n\na {\n  color: grey;\n  text-decoration: none; }\n\n.bio {\n  position: relative;\n  top: 120px; }\n\n.logo {\n  position: relative;\n  z-index: 100; }\n\n.scroll-cont {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  height: 110px;\n  overflow: hidden; }\n\n.scroll-border {\n  position: relative;\n  top: -90px;\n  background: url(" + __webpack_require__(552) + ");\n  width: 100%;\n  height: 500px;\n  background-repeat: repeat-x; }\n\n.work {\n  margin: auto;\n  padding-top: 80px;\n  position: relative;\n  top: 250px;\n  max-width: 600px;\n  height: 600px;\n  text-align: center;\n  background: url(" + __webpack_require__(549) + ");\n  background-size: 800px;\n  background-position: center;\n  background-repeat: no-repeat;\n  opacity: 0;\n  transition: opacity 0.5s ease-in; }\n\n.border {\n  border: 2px solid white;\n  margin: 0px 40px;\n  padding-bottom: 65px; }\n\n.first, .second {\n  color: white;\n  font-family: 'Oswald', sans-serif;\n  font-weight: 200;\n  font-size: 40px;\n  height: 25px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second h2 {\n  height: 20px;\n  position: relative;\n  bottom: 25px; }\n\n.title-container {\n  width: 225px;\n  height: 40px;\n  padding: 20px 0px;\n  margin: auto; }\n\n.title-container:hover .first {\n  transform: translate(1px);\n  cursor: pointer; }\n\n.title-container:hover .second {\n  transform: translate(-1px);\n  cursor: pointer; }\n\n.top {\n  padding-top: 70px; }\n\n.first-nav {\n  height: 10px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second-nav {\n  height: 7px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second-nav h2 {\n  position: relative;\n  bottom: 10px; }\n\n.title-container-nav:hover .first-nav {\n  transform: translate(1px);\n  cursor: pointer; }\n\n.title-container-nav:hover .second-nav {\n  transform: translate(-1px);\n  cursor: pointer; }\n\n.right {\n  width: 30%;\n  position: relative;\n  left: 680px;\n  top: -220px;\n  background: white;\n  line-height: 20px;\n  padding: 20px;\n  border-radius: 2px; }\n\n.about-title {\n  font-family: 'Oswald', sans-serif;\n  position: absolute;\n  top: -50px;\n  left: 20px;\n  font-size: 60px; }\n\n.bio {\n  height: 600px; }\n\n.bio img {\n  position: relative;\n  top: 50px;\n  left: 50px; }\n\n.divider {\n  position: relative;\n  top: 140px;\n  width: 75%;\n  height: 1px;\n  background: black;\n  margin: auto; }\n\n.project, .contact {\n  z-index: 1000;\n  background: white;\n  opacity: 0.95;\n  position: fixed;\n  top: 0px;\n  right: 0px;\n  width: 100%;\n  height: 100%; }\n\n.project h1 {\n  font-family: 'Oswald', sans-serif;\n  margin: 50px 50px 20px 50px;\n  font-size: 40px; }\n\n.project p {\n  margin: 0 200px 20px 50px; }\n\n.project img {\n  margin-left: 50px; }\n\n.escape {\n  position: absolute;\n  top: 50px;\n  right: 50px;\n  background: none;\n  border: none;\n  font-size: 40px;\n  transition: all 0.2s ease-out; }\n\n.escape:hover {\n  transform: scale(1.1);\n  cursor: pointer; }\n\n.contact {\n  text-align: center; }\n\n.contact ul {\n  margin-top: 200px; }\n\n.contact li {\n  vertical-align: middle;\n  display: inline-block;\n  padding: 50px;\n  width: 55px;\n  height: 55px; }\n\n.contact img {\n  transition: all 0.2s ease-in; }\n\n.contact img:hover {\n  transform: scale(1.1); }\n", ""]);
+	exports.push([module.id, "body {\n  font-family: sans-serif;\n  background: white;\n  color: black; }\n\nheader {\n  font-family: 'Oswald', sans-serif;\n  font-weight: 200;\n  color: lightGrey;\n  height: 110px;\n  width: 100%;\n  position: fixed;\n  z-index: 1;\n  display: flex;\n  transition: transform 0.5s ease-out; }\n\nbutton:focus {\n  outline: none; }\n\n.nav-cont {\n  width: 100%;\n  height: 90px;\n  background: white;\n  z-index: 100; }\n\n.nav {\n  position: absolute;\n  right: 0;\n  display: inline-block;\n  padding: 25px 40px 0 0;\n  z-index: 100; }\n\n.nav li {\n  display: inline-block;\n  margin: 20px; }\n\na {\n  color: grey;\n  text-decoration: none; }\n\n.bio {\n  position: relative;\n  top: 120px; }\n\n.logo {\n  position: relative;\n  z-index: 100; }\n\n.scroll-cont {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  height: 110px;\n  overflow: hidden; }\n\n.scroll-border {\n  position: relative;\n  top: -90px;\n  background: url(" + __webpack_require__(553) + ");\n  width: 100%;\n  height: 500px;\n  background-repeat: repeat-x; }\n\n.work {\n  margin: auto;\n  padding-top: 80px;\n  position: relative;\n  top: 250px;\n  max-width: 600px;\n  height: 600px;\n  text-align: center;\n  background: url(" + __webpack_require__(550) + ");\n  background-size: 800px;\n  background-position: center;\n  background-repeat: no-repeat;\n  opacity: 0;\n  transition: opacity 0.5s ease-in; }\n\n.border {\n  border: 2px solid white;\n  margin: 0px 40px;\n  padding-bottom: 65px; }\n\n.first, .second {\n  color: white;\n  font-family: 'Oswald', sans-serif;\n  font-weight: 200;\n  font-size: 40px;\n  height: 25px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second h2 {\n  height: 20px;\n  position: relative;\n  bottom: 25px; }\n\n.title-container {\n  width: 225px;\n  height: 40px;\n  padding: 20px 0px;\n  margin: auto; }\n\n.title-container:hover .first {\n  transform: translate(1px);\n  cursor: pointer; }\n\n.title-container:hover .second {\n  transform: translate(-1px);\n  cursor: pointer; }\n\n.top {\n  padding-top: 70px; }\n\n.first-nav {\n  height: 10px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second-nav {\n  height: 7px;\n  overflow: hidden;\n  transition: transform 0.5s ease-in; }\n\n.second-nav h2 {\n  position: relative;\n  bottom: 10px; }\n\n.title-container-nav:hover .first-nav {\n  transform: translate(1px);\n  cursor: pointer; }\n\n.title-container-nav:hover .second-nav {\n  transform: translate(-1px);\n  cursor: pointer; }\n\n.right {\n  width: 30%;\n  position: relative;\n  left: 680px;\n  top: -220px;\n  background: white;\n  line-height: 20px;\n  padding: 20px;\n  border-radius: 2px; }\n\n.about-title {\n  font-family: 'Oswald', sans-serif;\n  position: absolute;\n  top: -50px;\n  left: 20px;\n  font-size: 60px; }\n\n.bio {\n  height: 600px; }\n\n.bio img {\n  position: relative;\n  top: 50px;\n  left: 50px; }\n\n.divider {\n  position: relative;\n  top: 140px;\n  width: 75%;\n  height: 1px;\n  background: black;\n  margin: auto; }\n\n.project, .contact {\n  z-index: 1000;\n  background: white;\n  opacity: 0.95;\n  position: fixed;\n  top: 0px;\n  right: 0px;\n  width: 100%;\n  height: 100%; }\n\n.project h1 {\n  font-family: 'Oswald', sans-serif;\n  margin: 50px 50px 20px 50px;\n  font-size: 40px; }\n\n.project p {\n  margin: 0 200px 20px 50px; }\n\n.project img {\n  margin-left: 50px; }\n\n.escape {\n  position: absolute;\n  top: 50px;\n  right: 50px;\n  background: none;\n  border: none;\n  font-size: 40px;\n  transition: all 0.2s ease-out; }\n\n.escape:hover {\n  transform: scale(1.1);\n  cursor: pointer; }\n\n.contact {\n  text-align: center; }\n\n.contact ul {\n  margin-top: 200px; }\n\n.contact li {\n  vertical-align: middle;\n  display: inline-block;\n  padding: 50px;\n  width: 55px;\n  height: 55px; }\n\n.contact img {\n  transition: all 0.2s ease-in; }\n\n.contact img:hover {\n  transform: scale(1.1); }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 559 */
+/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(560);
+	var content = __webpack_require__(561);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(556)(content, {});
+	var update = __webpack_require__(557)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -35638,10 +35643,10 @@
 	}
 
 /***/ },
-/* 560 */
+/* 561 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(555)();
+	exports = module.exports = __webpack_require__(556)();
 	// imports
 
 
